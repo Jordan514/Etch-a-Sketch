@@ -1,5 +1,5 @@
 let container = document.querySelector("#container");
-
+createEtch(16);
 function createEtch(gridSize){
   for(let i = 0;i<gridSize;i++){
     let square = document.createElement("div");
@@ -16,13 +16,13 @@ function createEtch(gridSize){
   }
 }
 
-createEtch(16);
-
 let button = document.querySelector("button");
-function clearGrid (){
-  container.remove();
-}
 button.addEventListener("click", ()=> {
-  clearGrid();
-  
+  let number = prompt("Grid Size?");
+  if(number>100){
+    alert('This number is too big')
+  } else {
+  container.innerHTML = "";
+  createEtch(number);
+  }
 })
