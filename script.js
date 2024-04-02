@@ -50,7 +50,7 @@ let button = document.querySelector("button");
 button.addEventListener("click", ()=> {
   let number = prompt("Grid Size?");
   if(number>100){
-    alert('This number is too big')
+    alert('Sorry the max number is 100')
   } else {
   container.innerHTML = "";
   createEtch(number);
